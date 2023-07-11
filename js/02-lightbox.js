@@ -1,6 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 
-const galleryEl = document.querySelector(".gallery");
+const galleryElement = document.querySelector(".gallery");
 
 function createElementGallery(items) {
   return items.map(({ original, preview, description }) => `
@@ -13,7 +13,7 @@ function createElementGallery(items) {
 }
 
 const galleryMarkup = createElementGallery(galleryItems);
-galleryEl.insertAdjacentHTML("beforeend", galleryMarkup);
+galleryElement.insertAdjacentHTML("beforeend", galleryMarkup);
 
 const lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
